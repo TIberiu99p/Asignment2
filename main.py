@@ -39,14 +39,10 @@ def AddStudent(all_students):
 def RemoveStudent(all_students):
     del_stud_name = input('Enter name of the student: ')
     del_surname = input('Enter surname of the student: ')
-    for i in range(len(all_students)):
-        if all_students[i]['Name'] == del_stud_name and all_students[i]['Surname'] == del_surname:
-            del all_students[i]
-            break
+    with open('data.txt','w') as filehandle:
+        for i in range(len(all_students)):
+            if all_students[i]['Name'] == del_stud_name and all_students[i]['Surname'] == del_surname:
+                del all_students[i]
+                break
     
     
-        
-
-        
-            
-main()
